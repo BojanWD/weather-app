@@ -43,7 +43,7 @@ function App() {
   };
 
   const fetchWeatherData = async () => {
-    const apiKey = "ab1658aef0966b814887e72544046e26";
+    const apiKey = "openweathermapAPIkey"; //not a real API key, use own to test application
     const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${currentCity.lat}&lon=${currentCity.lng}&appid=${apiKey}`;
     setLoading(true);
     try {
