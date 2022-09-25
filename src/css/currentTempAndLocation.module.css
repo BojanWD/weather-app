@@ -1,0 +1,83 @@
+/* styles for top div with current temperature, location and additional info */
+
+.tempAndLocation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.curStats {
+  width: 70%;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.iconAndTemp {
+  display: flex;
+  align-items: center;
+}
+
+.iconContainer {
+  min-width: fit-content;
+  margin-right: 0.4rem;
+}
+
+.currTemp {
+  margin-top: 0;
+  min-width: 58%;
+}
+
+.additionalInfo {
+  margin-left: 1rem;
+  margin-top: 1.44rem;
+}
+
+.additionalInfo p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
+.location {
+  width: 30%;
+  text-align: right;
+  margin-right: 1rem;
+  margin-top: 0rem;
+  padding-top: 0rem;
+}
+
+.location h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.location p {
+  margin: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.passive {
+  opacity: 0.7;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .small {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .curStats {
+    width: 50%;
+  }
+
+  .location {
+    margin-left: 2rem;
+  }
+}

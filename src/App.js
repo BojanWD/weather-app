@@ -4,6 +4,7 @@ import cityData from "./data/cityData";
 // components
 import Loading from "./components/Loading";
 import Search from "./components/Search";
+import CurrentTempAndLocation from "./components/CurrentTempAndLocation";
 
 function App() {
   const [weatherData, setWeatherData] = useState([]); // presented weather data
@@ -151,11 +152,24 @@ function App() {
     setCurrentCity(cityData[index]);
   };
 
+  const changeTemperatureUnit = (tempUnit) => {
+    setCOrF(tempUnit);
+  };
+
   return (
     <main>
       <Search changeCity={changeLocation} />
       {loading && <Loading />}
-      {!loading && <></>}
+      {!loading && (
+        <>
+          <CurrentTempAndLocation
+            currentCity={currentCity}
+            cOrF={cOrF}
+            weatherData={weatherData}
+            switchCF={changeTemperatureUnit}
+          />
+        </>
+      )}
     </main>
   );
 }
