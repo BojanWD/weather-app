@@ -1,0 +1,13 @@
+/* Styles for line graph container */
+
+.graphContainer {
+  padding-top: 0.5rem;
+  width: 100%;
+  max-height: 140px;
+}
+
+@media screen and (max-width: 800px) {
+  .small {
+    display: none;
+  }
+}

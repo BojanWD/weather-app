@@ -5,6 +5,7 @@ import cityData from "./data/cityData";
 import Loading from "./components/Loading";
 import Search from "./components/Search";
 import CurrentTempAndLocation from "./components/CurrentTempAndLocation";
+import TempLineGraph from "./components/TempLineGraph";
 
 function App() {
   const [weatherData, setWeatherData] = useState([]); // presented weather data
@@ -168,6 +169,7 @@ function App() {
             weatherData={weatherData}
             switchCF={changeTemperatureUnit}
           />
+          <TempLineGraph lineGraphData={lineGraphData} />
         </>
       )}
     </main>
