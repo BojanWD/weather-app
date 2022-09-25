@@ -6,6 +6,7 @@ import Loading from "./components/Loading";
 import Search from "./components/Search";
 import CurrentTempAndLocation from "./components/CurrentTempAndLocation";
 import TempLineGraph from "./components/TempLineGraph";
+import DailyForecast from "./components/DailyForecast";
 
 function App() {
   const [weatherData, setWeatherData] = useState([]); // presented weather data
@@ -157,6 +158,10 @@ function App() {
     setCOrF(tempUnit);
   };
 
+  const changeDay = (dayIndex) => {
+    setIndex(dayIndex);
+  };
+
   return (
     <main>
       <Search changeCity={changeLocation} />
@@ -170,6 +175,12 @@ function App() {
             switchCF={changeTemperatureUnit}
           />
           <TempLineGraph lineGraphData={lineGraphData} />
+          <DailyForecast
+            changeDay={changeDay}
+            index={index}
+            weekIconData={weekIconData}
+            presentedWeatherData={presentedWeatherData}
+          />
         </>
       )}
     </main>

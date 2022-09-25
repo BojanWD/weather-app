@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import cityData from "../data/cityData";
 import styles from "../css/search.module.css";
 
-export default function Search({ changeLocation }) {
+export default function Search({ changeCity }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 
@@ -27,7 +27,7 @@ export default function Search({ changeLocation }) {
     setFilteredData([]);
     setWordEntered("");
     let index = cityData.indexOf(element);
-    changeLocation(index);
+    changeCity(index);
   };
 
   return (

@@ -1,0 +1,62 @@
+/* styles for bottom div with daily forecast icons */
+
+.dailyForecast {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.daily {
+  min-width: 8%;
+  text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.dailyFocus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.daily:hover {
+  cursor: pointer;
+}
+
+.shortDayName {
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+}
+
+.maxAndMin {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  font-size: 0.85rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.max {
+  margin: 0;
+  margin-right: 0.2rem;
+}
+
+.min {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  margin-right: 0.3rem;
+}
+
+@media screen and (max-width: 800px) {
+  .small {
+    display: none;
+  }
+
+  .addMargin {
+    margin-top: 0.4rem;
+  }
+}
