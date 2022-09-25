@@ -1,0 +1,68 @@
+/* Styles for Search bar */
+.search {
+  width: 20rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.search .searchInputs input {
+  width: 18rem;
+  background-color: rgba(48, 49, 52, 255);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.search .searchInputs input:hover {
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 1);
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 255, 255, 0.6);
+  /* Firefox */
+}
+
+.dataResults {
+  position: absolute;
+  left: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 18rem;
+  max-height: 12rem;
+  overflow: hidden;
+  text-transform: capitalize;
+  border-radius: 5px;
+  margin-top: 0.1rem;
+  background-color: rgba(48, 49, 52, 255);
+  overflow-y: auto;
+  color: white;
+  text-align: left;
+  z-index: 1000;
+}
+
+.srcItem:hover {
+  color: white;
+  background-color: rgba(32, 33, 36, 255);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+  .search {
+    width: 16rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .search .searchInputs input {
+    width: 14rem;
+  }
+
+  .dataResults {
+    width: 14rem;
+  }
+}
