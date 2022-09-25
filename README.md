@@ -1,3 +1,13 @@
+## How I worked on this project 
+My goal was to create a weather app which shows current temperature and other relevant weather information, as well as an hourly and daily weather forecast.
+Design was based on the default Google’s weather app design in dark mode.
+
+## Project characteristics 
+
+State(s) in project was handled using useState hook as it is a simple app so there was no need for useContext or external state management library. Another option was to use useReducer hook but because there is not much complexity in the form of changes in the state the useState was chosen. 
+Project is fully responsive and has different layouts for big, small and ultra-small screens. CSS was implemented using CSS modules. CSS modules were chosen because they scope class names locally by default and allow to create portable, reusable CSS files without concern about name collisions.
+For hourly forecast display, react-chart-js package was used. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
